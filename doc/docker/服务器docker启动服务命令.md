@@ -1,6 +1,3 @@
-
-
-
 //启动redis
 docker run --restart=always -p 6380:6379 --name myredis -d redis:7.0.12 
 

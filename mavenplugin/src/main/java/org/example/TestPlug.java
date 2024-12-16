@@ -8,25 +8,13 @@ import java.util.*;
 import java.util.concurrent.*;
 public class TestPlug {
     public static void main(String[] args) throws IOException, NoSuchFieldException, IllegalAccessException, InterruptedException {
-//        System.out.println("Hello world!");
-//        byte[] bytes = "666".getBytes(StandardCharsets.UTF_8);
-//        System.out.println();
-//        List<String> strings=new ArrayList<>();
-//        strings.add("111");
-
-//        strings.add("222");
-//        strings.add("333");
-//        System.out.println(strings);
-//        ConcurrentHashMap
         int n = 10 - 1;
         n |= n >>> 1;
         n |= n >>> 2;
         n |= n >>> 4;
         n |= n >>> 8;
         n |= n >>> 16;
-
         System.out.println(n+1);
-
         HashMap<String,String> map=new HashMap<>(10);
         map.put("666","666");
         map.put("777","777");
@@ -36,11 +24,6 @@ public class TestPlug {
         map.put("775","777");
         map.put("776","777");
         map.put("778","777");
-//        map.put("770","777");
-//        map.put("771","777");
-//        map.put("732","777");
-//        map.put("723132","777");
-//        map.put("3213","777");
         Class<? extends HashMap> aClass = map.getClass();
         Field entrySet = aClass.getDeclaredField("threshold");
         entrySet.setAccessible(true);
@@ -55,22 +38,13 @@ public class TestPlug {
             }
         });
         t.start();
-
         TimeUnit.SECONDS.sleep(2);
         System.out.println("666");
         ThreadLocal threadLocal=new ThreadLocal<>();
         threadLocal.set("");
-
         threadLocal.get();
-
         Unsafe unsafe=Unsafe.getUnsafe();
-
         long address = unsafe.allocateMemory(9231l);
-
 //        unsafe.freeMemory(address);
-
-
-
-
     }
 }
