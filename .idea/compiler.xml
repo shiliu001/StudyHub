@@ -6,6 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JavaSE" />
+        <module name="Design" />
+        <module name="mavenplugin" />
+        <module name="Utils" />
         <module name="LeetCode" />
       </profile>
     </annotationProcessing>
